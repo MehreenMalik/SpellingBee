@@ -5,8 +5,6 @@ using System.Collections;
 
 public class TestManager : MonoBehaviour
 {
-    string currentWord;
-
     public Text userInput;
 
     public Button A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, EnterButton;
@@ -15,11 +13,6 @@ public class TestManager : MonoBehaviour
 
     public Image imgWrong;
     public Image imgRight;
-
-    void OnEnable()
-    {
-        currentWord = PlayerPrefs.GetString("currentWord");
-    }
 
     void Start()
     {
@@ -197,6 +190,10 @@ public class TestManager : MonoBehaviour
             userInput.text = null;
             imgRight.enabled = true;
 
+            int currentWordIndex = PlayerPrefs.GetInt("currentWordIndex");
+            GameControl.wordsToLearn.RemoveAt(currentWordIndex);    //removes current word
+            GameControl.manager.SetCurrentWord();   //Changes current word
+            
             StartCoroutine(ChangeScene());
         }
         else
@@ -216,7 +213,7 @@ public class TestManager : MonoBehaviour
 
     IEnumerator ChangeScene()
     {
-        yield return new WaitForSeconds(2);
-        //SceneManager.LoadScene("1_learn");
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("1_learn");
     }
 }

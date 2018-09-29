@@ -1098,7 +1098,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 310, y: -16}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 149, y: 39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &403202744
 MonoBehaviour:
@@ -1171,7 +1171,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c9fe8124ef5182e4689d08a25f6d395f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1250005f385c59a4e826ecebbe1b91df, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1935,7 +1935,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1996,7 +1996,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userInput: {fileID: 633147338}
-  txtTryAgain: {fileID: 0}
   A: {fileID: 1830838949}
   B: {fileID: 298358}
   C: {fileID: 1547606512}
@@ -2027,7 +2026,6 @@ MonoBehaviour:
   imgFruit: {fileID: 558239857}
   imgWrong: {fileID: 1251051407}
   imgRight: {fileID: 1270878687}
-  sec: 14
 --- !u!1 &691618436
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,7 +3986,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 56eaf38cca3b0e44e9f7d0f6a92a8b8c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1678ee9e2acb4848951cc6b097298ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

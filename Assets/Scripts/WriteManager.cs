@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class WriteManager : MonoBehaviour
 {
-    string currentWord;
-
     public Text userInput, txtTitle;
 
     public Button A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, EnterButton;
@@ -21,11 +19,6 @@ public class WriteManager : MonoBehaviour
 
     public Image imgWrongThree;
     public Image imgRightThree;
-
-    void OnEnable()
-    {
-        currentWord = PlayerPrefs.GetString("currentWord");
-    }
 
     void Start()
     {
