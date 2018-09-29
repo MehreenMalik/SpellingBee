@@ -47,5 +47,7 @@ public class GameControl : MonoBehaviour
     {
         int randomWordIndex = Random.Range(0, wordsToLearn.Count);
         currentWord = wordsToLearn[randomWordIndex];
+
+        Debug.Log("Current word: " + currentWord.word);
     }
 }

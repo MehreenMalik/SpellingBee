@@ -1,26 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
-public class WriteManager : MonoBehaviour
+public class TestManager : MonoBehaviour
 {
     string currentWord;
 
-    public Text userInput, txtTitle;
+    public Text userInput;
 
     public Button A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, EnterButton;
 
     public Image imgFruit;
 
-    int turn;
-    public Image imgWrongOne;
-    public Image imgRightOne;
-
-    public Image imgWrongTwo;
-    public Image imgRightTwo;
-
-    public Image imgWrongThree;
-    public Image imgRightThree;
+    public Image imgWrong;
+    public Image imgRight;
 
     void OnEnable()
     {
@@ -29,17 +23,9 @@ public class WriteManager : MonoBehaviour
 
     void Start()
     {
-        turn = 0;
-        imgWrongOne.enabled = false;
-        imgRightOne.enabled = false;
-
-        imgWrongTwo.enabled = false;
-        imgRightTwo.enabled = false;
-
-        imgWrongThree.enabled = false;
-        imgRightThree.enabled = false;
-
-        txtTitle.text = GameControl.manager.currentWord.word;
+        imgWrong.enabled = false;
+        imgRight.enabled = false;
+          
         imgFruit.sprite = GameControl.manager.currentWord.image;
     }
 
@@ -206,51 +192,31 @@ public class WriteManager : MonoBehaviour
 
     public void EnterSelected()
     {
-        turn+=1;
+        if (userInput.text == GameControl.manager.currentWord.word.ToUpper())
+        {
+            userInput.text = null;
+            imgRight.enabled = true;
 
-        if(turn==1)
-        {
-            if (userInput.text == GameControl.manager.currentWord.word.ToUpper())
-            {
-                userInput.text = null;
-                imgRightOne.enabled = true;
-            }
-            else
-            {
-                userInput.text = null;
-                imgWrongOne.enabled = true;
-            }
+            StartCoroutine(ChangeScene());
         }
-        if (turn == 2)
+        else
         {
-            if (userInput.text == GameControl.manager.currentWord.word.ToUpper())
-            {
-                userInput.text = null;
-                imgRightTwo.enabled = true;
-            }
-            else
-            {
-                userInput.text = null;
-                imgWrongTwo.enabled = true;
-            }
+            userInput.text = null;
+            imgWrong.enabled = true;
+
+            StartCoroutine(RemoveImg());
         }
-        if (turn == 3)
-        {
-            if (userInput.text == GameControl.manager.currentWord.word.ToUpper())
-            {
-                userInput.text = null;
-                imgRightThree.enabled = true;
-            }
-            else
-            {
-                userInput.text = null;
-                imgWrongThree.enabled = true;
-            }
-        }
-        if (turn > 3)
-        {
-            //Change scenes popup
-            SceneManager.LoadScene("3_test");
-        }
+    }
+
+    IEnumerator RemoveImg()
+    {
+        yield return new WaitForSeconds(2);
+        imgWrong.enabled = false;
+    }
+
+    IEnumerator ChangeScene()
+    {
+        yield return new WaitForSeconds(2);
+        //SceneManager.LoadScene("1_learn");
     }
 }
