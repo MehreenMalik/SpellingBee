@@ -49,8 +49,6 @@ public class GameControl : MonoBehaviour
     {
         if(wordsToLearn == null || wordsToLearn.Count == 0)
         {
-            Debug.Log("Word list ended");
-
             if (categorySelected == "fruit") //repopulate wordsToLearn list
             {
                 wordsToLearn = fruit.ToList<Word>();

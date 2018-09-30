@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class LearnManager : MonoBehaviour
 {
     public Text word;
-    public Image imgFruit;
+    public Image img;
 
     void Start ()
     {
@@ -14,6 +14,6 @@ public class LearnManager : MonoBehaviour
     void SetCurrentWord()
     {
         word.text = GameControl.manager.currentWord.word;
-        imgFruit.sprite = GameControl.manager.currentWord.image;
+        img.sprite = GameControl.manager.currentWord.image;
     }
 }
