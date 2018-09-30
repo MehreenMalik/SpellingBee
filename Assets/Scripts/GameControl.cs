@@ -54,12 +54,10 @@ public class GameControl : MonoBehaviour
             if (categorySelected == "fruit") //repopulate wordsToLearn list
             {
                 wordsToLearn = fruit.ToList<Word>();
-                SetCurrentWord();
             }
             else if (categorySelected == "school")
             {
                 wordsToLearn = school.ToList<Word>();
-                SetCurrentWord();
             }
 
             //Change to end category scene
