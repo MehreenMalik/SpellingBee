@@ -25,7 +25,7 @@ public class GameControl : MonoBehaviour
             Destroy(gameObject);
         }
 
-        categorySelected = PlayerPrefs.GetString("categorySlected");
+        categorySelected = PlayerPrefs.GetString("categorySelected");
     }
 
     void Start()
@@ -67,8 +67,6 @@ public class GameControl : MonoBehaviour
             currentWord = wordsToLearn[randomWordIndex];
 
             PlayerPrefs.SetInt("currentWordIndex", randomWordIndex);
-
-            Debug.Log("Current word: " + currentWord.word);
         }
     }
 }

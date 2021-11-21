@@ -13,16 +13,14 @@ public class ButtonActions : MonoBehaviour
     public void LOAD_LEVEL_FRUIT()
     {
         category = "fruit";
-
-        PlayerPrefs.SetString("categorySlected", category);
+        PlayerPrefs.SetString("categorySelected", category);
         SceneManager.LoadScene("1_learn");
     }
 
     public void LOAD_LEVEL_School()
     {
         category = "school";
-
-        PlayerPrefs.SetString("categorySlected", category);
+        PlayerPrefs.SetString("categorySelected", category);
         SceneManager.LoadScene("1_learn");
     }
 
